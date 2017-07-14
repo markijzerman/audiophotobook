@@ -1,0 +1,15 @@
+#N canvas 590 212 450 300 10;
+#X obj 85 276 dac~;
+#X text 242 17 MAKE STEREO!!;
+#X obj 309 62 osc~ 110;
+#X obj 95 238 *~ 0.2;
+#X obj 144 172 readsf~;
+#X msg 89 74 open Mark.aif \, start;
+#X obj 208 203 readsf~;
+#X msg 204 108 open whistle.wav \, start;
+#X connect 3 0 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
