@@ -22,7 +22,7 @@ print(reader.get_model()) # print the model to see if it's working
 reader.set_region("EU3") # set a region to work with
 reader.set_read_plan([1], "GEN2", read_power=1900)
 
-# Below should be the IDs of the RFID tags!
+# Below should be the IDs of the RFID tags! Their location is the page numbers
 knownIDs = [b'E2000015860E01451120AB56',
         b'48656C6C6F2101591120AB75',
         b'E2000015860E01601120AB6E',
@@ -34,21 +34,21 @@ def readTags():
 	incomingIDs = reader.read(timeout=100)
 	#print (list(incomingIDs))
 	print ("length of list is", len(incomingIDs))
-
-	listLength = len(incomingIDs)
-
 	# make list out of all the tags epc item. CurIDs is flat list
-
 	curIDs = []
+	pageNumbers = []
+	curPages = []
 
-	for x in range(0, listLength):
+	for x in range(0, len(incomingIDs)):
 		curIDs.append(incomingIDs[x].epc)
-	
-	print (curIDs)
 
 	# comparing lists, output the location of the found IDs within knownIDs
-	#print (incomingIDs[0].epc)
-	#print (dir(incomingIDs[0]))
+	for x in range(0, len(curIDs)):
+		pagePresent = knownIDs.index(curIDs[x])
+		curPages.append(pagePresent)
+		curPages.sort(key=int)
+
+	print (curPages)
 
 
 readTags()
