@@ -15,6 +15,7 @@ import threading
 import time 
 import mercury
 import collections
+import os
 
 # set-up for the connected reader
 reader = mercury.Reader("tmr:///dev/ttyS0", baudrate=115200)
@@ -27,6 +28,10 @@ knownIDs = [b'E2000015860E01451120AB56',
         b'48656C6C6F2101591120AB75',
         b'E2000015860E01601120AB6E',
         b'E2000015860E01611120AB76']
+
+def send2Pd(message=''):
+	# send a message to Pd
+	os.system("echo '" + message + "' | pdsend 3000")
 
 def readTags():
 	threading.Timer(0.15, readTags).start()
@@ -48,7 +53,10 @@ def readTags():
 		curPages.append(pagePresent)
 		curPages.sort(key=int)
 
-	print (curPages)
+	# print (curPages)
+	send2Pd(curPages)
+
+
 
 
 readTags()
