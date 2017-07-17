@@ -11,33 +11,16 @@
 # ---------------------------------------------------------
 
 # importing libraries
+import threading
 import time 
 import mercury
 import collections
 
-# setting the connected reader
+# set-up for the connected reader
 reader = mercury.Reader("tmr:///dev/ttyS0", baudrate=115200)
 print(reader.get_model()) # print the model to see if it's working
 reader.set_region("EU3") # set a region to work with
 reader.set_read_plan([1], "GEN2", read_power=1900)
-
-
-# this reads all of them in one go within the given time limit, and puts them in the CurID list
-CurIDs = reader.read()
-
-CurrrIDs = list(CurIDs)
-
-set = set(CurIDs)
-CurIDs_noduplicates = list(set)
-print (CurIDs_noduplicates)
-
-
-def makeUnique(seq):
-    seen = set()
-    seen_add = seen.add
-    return [x for x in seq if not (x in seen or seen_add(x))]
-
-
 
 # Below should be the IDs of the RFID tags!
 knownIDs = [b'E2000015860E01451120AB56',
@@ -45,22 +28,27 @@ knownIDs = [b'E2000015860E01451120AB56',
         b'E2000015860E01601120AB6E',
         b'E2000015860E01611120AB76']
 
+def readTags():
+	threading.Timer(0.15, readTags).start()
+	# this reads all of them in one go within the given time limit, and puts them in the CurIDs list
+	incomingIDs = reader.read(timeout=100)
+	#print (list(incomingIDs))
+	print ("length of list is", len(incomingIDs))
 
-def checkIfIDexists():
-	# this looks at if the given ID is in the list IDs!
-	index = dict((y,x) for x,y in enumerate(knownIDs))
-	try:
-	# it should enter the page ID into index from the RFID reader!
-   		IDfound_index = index[ID]
-	except KeyError:
-   		print ("ID is not found in knownIDs")
-	else:
-	    print ("ID is found in knownIDs")
-	    print ("The ID that is found is", IDfound_index)
-	    
-	    # Put it in the CurIDs list if it isn't there yet
-	    if not IDfound_index in CurIDs:
-	      CurIDs.append(IDfound_index)
-	      print("Current IDs is added to CurIDs. Now consists of:", CurIDs)
-	    else:
-	      print("Current ID is already in CurIDs")
+	listLength = len(incomingIDs)
+
+	# make list out of all the tags epc item. CurIDs is flat list
+
+	curIDs = []
+
+	for x in range(0, listLength):
+		curIDs.append(incomingIDs[x].epc)
+	
+	print (curIDs)
+
+	# comparing lists, output the location of the found IDs within knownIDs
+	#print (incomingIDs[0].epc)
+	#print (dir(incomingIDs[0]))
+
+
+readTags()
