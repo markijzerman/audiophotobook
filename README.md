@@ -14,4 +14,5 @@ This keeps everything nice & small so it can easily be embedded in the book.
 This is a starting point to experiment with new ways of telling stories and an exploration into creating very small/thin embedded audio applications.
 
 ### Notes
+- In the "notes" folder there are logs I keep on setting up the Pi, what I run in to with the lasercutter, et cetera.
 - The pHAT DAC can easily be swapped out for some speaker HATs, such as this nifty Speaker Bonnet: https://learn.adafruit.com/adafruit-speaker-bonnet-for-raspberry-pi/overview
