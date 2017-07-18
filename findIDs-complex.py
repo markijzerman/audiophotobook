@@ -15,7 +15,19 @@ import threading
 import time 
 import mercury
 import collections
-import os
+import argparse
+from pythonosc import osc_message_builder
+from pythonosc import udp_client
+
+# set up OSC stuff
+if __name__ == "__main__":
+  parser = argparse.ArgumentParser()
+  parser.add_argument("--ip", default="127.0.0.1",
+      help="The ip of the OSC server")
+  parser.add_argument("--port", type=int, default=5005,
+      help="The port the OSC server is listening on")
+  args = parser.parse_args()
+  client = udp_client.SimpleUDPClient(args.ip, args.port)
 
 # set-up for the connected reader
 reader = mercury.Reader("tmr:///dev/ttyS0", baudrate=115200)
@@ -29,19 +41,14 @@ knownIDs = [b'E2000015860E01451120AB56',
         b'E2000015860E01601120AB6E',
         b'E2000015860E01611120AB76']
 
-def send2Pd(message=''):
-	# send a message to Pd
-	os.system("echo '" + message + "' | pdsend 3000")
-
 def readTags():
 	threading.Timer(0.15, readTags).start()
 	# this reads all of them in one go within the given time limit, and puts them in the CurIDs list
 	incomingIDs = reader.read(timeout=100)
-	#print (list(incomingIDs))
-	print ("length of list is", len(incomingIDs))
+	# print ("length of list is", len(incomingIDs))
+	
 	# make list out of all the tags epc item. CurIDs is flat list
 	curIDs = []
-	pageNumbers = []
 	curPages = []
 
 	for x in range(0, len(incomingIDs)):
@@ -52,11 +59,8 @@ def readTags():
 		pagePresent = knownIDs.index(curIDs[x])
 		curPages.append(pagePresent)
 		curPages.sort(key=int)
-
-	# print (curPages)
-	send2Pd(curPages)
-
-
-
+	
+	print (curPages)
+	client.send_message("/pages", curPages)
 
 readTags()
