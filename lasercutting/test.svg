@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg3378"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="zebtest.svg">
+  <defs
+     id="defs3380" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.828068"
+     inkscape:cx="214.34241"
+     inkscape:cy="891.62908"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1151"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3383">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 110.62109,53.400391 c -28.908545,0.145255 -55.532688,29.318535 -43.304684,60.105469 51.210764,80.88457 40.094254,57.55046 84.835934,87.63281 l -0.002,0.58008 c 0.15115,-0.10233 0.28565,-0.18988 0.43555,-0.29102 0.15031,0.10142 0.28593,0.1884 0.4375,0.29102 l -0.002,-0.58008 c 44.74135,-30.08205 33.62529,-6.74841 84.83594,-87.63281 C 256.47435,66.633272 185.03332,23.506962 152.58594,80.859375 141.4507,61.177273 125.72532,53.324497 110.62109,53.400391 Z"
+       id="path4239"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3386"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(28.57305,14.713673)"><flowRegion
+         id="flowRegion3388"><rect
+           id="rect3390"
+           width="90.016747"
+           height="47.23502"
+           x="85.714287"
+           y="75.219345"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface';fill:#000000" /></flowRegion><flowPara
+         id="flowPara3392"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface';fill:#000000">ZEB</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15.3826437px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="124.93497"
+       y="161.29549"
+       id="text3339"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3341"
+         x="124.93497"
+         y="161.29549">1+1=2</tspan></text>
+  </g>
+</svg>
