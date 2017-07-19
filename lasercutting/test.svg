@@ -15,7 +15,7 @@
    id="svg3378"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="zebtest.svg">
+   sodipodi:docname="test.svg">
   <defs
      id="defs3380" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.828068"
-     inkscape:cx="214.34241"
+     inkscape:cx="162.36346"
      inkscape:cy="891.62908"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -63,20 +63,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3386"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(28.57305,14.713673)"><flowRegion
-         id="flowRegion3388"><rect
-           id="rect3390"
-           width="90.016747"
-           height="47.23502"
-           x="85.714287"
-           y="75.219345"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface';fill:#000000" /></flowRegion><flowPara
-         id="flowPara3392"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface';fill:#000000">ZEB</flowPara></flowRoot>    <text
+    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15.3826437px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="124.93497"
@@ -87,5 +74,26 @@
          id="tspan3341"
          x="124.93497"
          y="161.29549">1+1=2</tspan></text>
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4141"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion4143"><rect
+           id="rect4145"
+           width="107.49388"
+           height="41.724598"
+           x="108.20107"
+           y="94.818047" /></flowRegion><flowPara
+         id="flowPara4147">ZEBZEB</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4149"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0.9658345,8.8399572)"><flowRegion
+         id="flowRegion4151"><rect
+           id="rect4153"
+           width="88.045975"
+           height="45.967777"
+           x="112.09066"
+           y="83.1493" /></flowRegion><flowPara
+         id="flowPara4155">ZEB</flowPara></flowRoot>  </g>
 </svg>
