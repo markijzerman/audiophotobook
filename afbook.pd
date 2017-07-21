@@ -1,4 +1,4 @@
-#N canvas 52 283 588 711 10;
+#N canvas 477 274 588 711 10;
 #X obj 42 635 dac~;
 #X obj 26 595 *~ 0.2;
 #X obj 116 151 oscparse;
@@ -31,14 +31,14 @@
 #X obj 236 476 sprintf open sounds/%s;
 #X obj 236 498 t b a;
 #X msg 204 533 start;
-#X obj 272 99 delay 100;
 #X msg 272 128 \; pd dsp 1;
+#X obj 272 99 delay 1000;
 #X connect 1 0 0 0;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
 #X connect 4 0 2 0;
 #X connect 5 0 3 0;
-#X connect 5 0 31 0;
+#X connect 5 0 32 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
 #X connect 8 0 11 0;
@@ -63,4 +63,4 @@
 #X connect 29 0 30 0;
 #X connect 29 1 13 0;
 #X connect 30 0 13 0;
-#X connect 31 0 32 0;
+#X connect 32 0 31 0;
