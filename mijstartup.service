@@ -1,0 +1,10 @@
+[Unit]
+Description=afbook project startup file
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=~/afbook/startup.sh
+
+[Install]
+WantedBy=multi-user.target
