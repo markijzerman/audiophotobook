@@ -11,9 +11,8 @@
 
 sleep 10
 
-/usr/bin/python3 /home/pi/afbook/findIDs.py &
-/usr/bin/pd -nogui /home/pi/afbook/afbook.pd > /home/pi/afbook/pdlog.log 2>&1
-#/usr/bin/python3 /home/pi/afbook/findIDs.py
+/usr/bin/pd -nogui /home/pi/afbook/afbook.pd &
+/usr/bin/python3 /home/pi/afbook/findIDs.py > /home/pi/afbook/python.log 2>&1
 
 exit 0
 
