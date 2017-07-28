@@ -1,4 +1,4 @@
-#N canvas 477 274 588 711 10;
+#N canvas 740 125 588 711 10;
 #X obj 42 635 dac~;
 #X obj 26 595 *~ 0.2;
 #X obj 116 151 oscparse;
@@ -33,6 +33,10 @@
 #X msg 204 533 start;
 #X msg 272 128 \; pd dsp 1;
 #X obj 272 99 delay 1000;
+#X obj 137 433 receive fileToPlay;
+#X obj 415 167 send fileToPlay;
+#X obj 375 118 delay 200;
+#X msg 384 144 startup_gayageum.wav;
 #X connect 1 0 0 0;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
@@ -64,3 +68,7 @@
 #X connect 29 1 13 0;
 #X connect 30 0 13 0;
 #X connect 32 0 31 0;
+#X connect 32 0 35 0;
+#X connect 33 0 28 0;
+#X connect 35 0 36 0;
+#X connect 36 0 34 0;
