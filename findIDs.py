@@ -34,7 +34,7 @@ if __name__ == "__main__":
 reader = mercury.Reader("tmr:///dev/serial0", baudrate=115200)
 print(reader.get_model()) # print the model to see if it's working
 reader.set_region("EU3") # set a region to work with
-reader.set_read_plan([1], "GEN2", read_power=2000)
+reader.set_read_plan([1], "GEN2", read_power=1400)
 
 # Below should be the IDs of the RFID tags! Their location is the page numbers
 knownIDs = [b'E20040057307015424301ED2',
@@ -46,7 +46,20 @@ knownIDs = [b'E20040057307015424301ED2',
 	b'E20040057307024724301F89',
 	b'E20040057307024324301F7B',
 	b'E20040057307023924301F79',
-	b'E20040057307023524301F6B']
+	b'E20040057307023524301F6B',
+	b'E20040057307016624101EE8',
+	b'E20040057307016224101EE6',
+	b'E20040057307015824101ED8',
+	b'E20040057307015424101ED6',
+	b'E20040057307014924101EC0',
+	b'E20040057307010124701AFA',
+	b'E20040057307010524701AFC',
+	b'E20040057307010924701B0A',
+	b'E20040057307011424701B14',
+	b'E20040057307011824701B22',
+	b'E2005186010701930700CC1A',
+	b'E2005186010701930690CC19',
+	b'E2005186010701930670D113']
 
 def readTags():
 	threading.Timer(0.15, readTags).start()
