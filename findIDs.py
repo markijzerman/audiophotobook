@@ -16,6 +16,7 @@ import time
 import mercury
 import collections
 import argparse
+from more_itertools import unique_everseen
 from pythonosc import osc_message_builder
 from pythonosc import udp_client
 
@@ -33,18 +34,19 @@ if __name__ == "__main__":
 reader = mercury.Reader("tmr:///dev/serial0", baudrate=115200)
 print(reader.get_model()) # print the model to see if it's working
 reader.set_region("EU3") # set a region to work with
-reader.set_read_plan([1], "GEN2", read_power=1900)
+reader.set_read_plan([1], "GEN2", read_power=2000)
 
 # Below should be the IDs of the RFID tags! Their location is the page numbers
-knownIDs = [b'E2000015860E01451120AB56',
-        b'48656C6C6F2101591120AB75',
-        b'E2000015860E01601120AB6E',
-        b'E2000015860E01611120AB76',
-        b'E2005186010701930660D112', 
-        b'E2005186010701930670D113',
-        b'E2005186010701930690CC19', 
-        b'E2005186010701930700CC1A',
-        b'E2005186010701930680D114']
+knownIDs = [b'E20040057307015424301ED2',
+	b'E20040057307015824301ED4',
+	b'E20040057307016224301EE2',
+	b'E20040057307016624301EE4',
+	b'E20040057307017024301EF2',
+	b'E20040057307025124301F8B',
+	b'E20040057307024724301F89',
+	b'E20040057307024324301F7B',
+	b'E20040057307023924301F79',
+	b'E20040057307023524301F6B']
 
 def readTags():
 	threading.Timer(0.15, readTags).start()
@@ -61,10 +63,12 @@ def readTags():
 
 	# comparing lists, output the location of the found IDs within knownIDs
 	for x in range(0, len(curIDs)):
-		pagePresent = knownIDs.index(curIDs[x])
+		pagePresent = knownIDs.index(curIDs[x]) + 1
 		curPages.append(pagePresent)
 		curPages.sort(key=int)
 	
+	# Take out the duplicates using unique_everseen, and print it.
+	curPages = list(unique_everseen(curPages))
 	print (curPages)
 	client.send_message("/pages", curPages)
 
