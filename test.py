@@ -12,5 +12,5 @@ reader.set_read_plan([1], "GEN2", read_power=1900)
 print(reader.read())
 
 reader.start_reading(lambda tag: print(tag.epc, tag.antenna, tag.read_count, tag.rssi))
-time.sleep(10)
+time.sleep(90)
 reader.stop_reading()
