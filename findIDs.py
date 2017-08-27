@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
 # set-up for the connected reader
 reader = mercury.Reader("tmr:///dev/serial0", baudrate=115200)
-print(reader.get_model()) # print the model to see if it's working
+# ### print(reader.get_model()) # print the model to see if it's working
 reader.set_region("EU3") # set a region to work with
 reader.set_read_plan([1], "GEN2", read_power=1400)
 
@@ -83,7 +83,7 @@ def readTags():
 	
 	# Take out the duplicates using unique_everseen, and print it.
 	curPages = list(unique_everseen(curPages))
-	print (curPages)
+# ###	print (curPages)
 	client.send_message("/pages", curPages)
 
 readTags()
